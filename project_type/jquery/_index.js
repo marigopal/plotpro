@@ -106,3 +106,25 @@ function delete_projecttype(id)
 {
     $("#delete_uid").val(id);
 }
+function projecttype_validate()
+{
+    var projecttype_name = $("#projecttype_name").val();
+    $.ajax
+            ({
+                type: "POST",
+                url: "_dbPage/validate_prjecttype.php",
+                data: 'projecttype_name=' + projecttype_name,
+                datatype: "html",
+                success: function (result)
+                {
+                    if (result == 1)
+                    {
+                        toastr_error_msg('Project Type Already Used.');
+                    } else
+                    {
+                        remove_disabled('save_button');
+                    }
+                }
+            });
+
+}

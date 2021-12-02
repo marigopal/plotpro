@@ -8,11 +8,11 @@
                         <div class="col-12">
                             <div class="form-group" hidden="">
                                 <label>Unique ID<span class="required text-red">*</span></label>
-                                <input type="text" class="form-control" id="projecttype_id" name="projecttype_id" placeholder="Project Type ID" onkeyup="input_remove_error_notification('firstname');">
+                                <input type="text" class="form-control" id="projecttype_id" name="projecttype_id" placeholder="Project Type ID">
                             </div>
                             <div class="form-group">
                                 <label>Name<span class="required text-red">*</span></label>
-                                <input type="text" class="form-control" id="projecttype_name" name="projecttype_name" placeholder="Project Type Name" onkeyup="input_remove_error_notification('firstname');">
+                                <input type="text" class="form-control" id="projecttype_name" name="projecttype_name" placeholder="Project Type Name" onkeyup="input_remove_error_notification('projecttype_name');" onchange="projecttype_validate()">
                             </div>
                         </div>
                     </div>
@@ -20,7 +20,7 @@
             </div>
             <div class="modal-footer ">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="save_button" name="save_button">Save</button>
+                <button type="button" class="btn btn-primary" id="save_button" name="save_button" disabled>Save</button>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
                     <div class="col-12">
                         <div class="form-group">
                             <label>Unique ID<span class="required text-red">*</span></label>
-                            <input type="text" class="form-control" id="delete_uid" name="delete_uid" placeholder="Unique ID" onkeyup="input_remove_error_notification('firstname');">
+                            <input type="text" class="form-control" id="delete_uid" name="delete_uid" placeholder="Unique ID">
                         </div>
                     </div>
                 </div>
