@@ -29,6 +29,23 @@ $("#save_user").click(function ()
     {
         isNew = true;
     }
+    if(full_name == '')
+    {
+        toastr_error_msg('Please Enter the Fullname.');
+    }
+    else if(username == '')
+    {
+        toastr_error_msg('Please Enter the Username.');
+    }
+    else if(password == '')
+    {
+        toastr_error_msg('Please Enter the Password.');
+    }
+    else if(user_role == 0)
+    {
+        toastr_error_msg('Please select one User Role.');
+    }
+    else{
     $.ajax
             ({
                 type: "POST",
@@ -59,6 +76,7 @@ $("#save_user").click(function ()
                    }
                 }
             });
+        }
 });
 $("#delete_user").click(function ()
 {
@@ -139,3 +157,27 @@ $("#password_checkbox").click(function(){
 $(document).ready(function(){
     load_userroles('user_role');
 });
+function username_validate()
+{
+    var username = $("#username").val();
+    $.ajax
+            ({
+                type: "POST",
+                url: "_dbPage/validate_username.php",
+                data: 'username=' + username,
+                datatype: "html",
+                success: function (result)
+                {
+                    if (result == 1)
+                    {
+                        add_disabled('save_user');
+                        toastr_error_msg('Username already taken.');
+                        
+                    } else
+                    {
+                        remove_disabled('save_user');
+                    }
+                }
+            });
+
+}

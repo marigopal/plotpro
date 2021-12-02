@@ -63,6 +63,10 @@ $("#save_landlord").click(function ()
     {
         isNew = true;
     }
+    if(landlord_name == '')
+    {
+        toastr_error_msg('Please Enter Landlord Name.');
+    }else{
     $.ajax
             ({
                 type: "POST",
@@ -88,6 +92,7 @@ $("#save_landlord").click(function ()
                     }
                 }
             });
+        }
 });
 $("#delete_landlord").click(function ()
 {

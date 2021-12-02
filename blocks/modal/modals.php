@@ -12,7 +12,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Name<span class="required text-red">*</span></label>
-                                <input type="text" class="form-control" id="blocks_name" name="blocks_name" placeholder="Block Name" onkeyup="input_remove_error_notification('firstname');">
+                                <input type="text" class="form-control" id="blocks_name" name="blocks_name" placeholder="Block Name" onkeyup="input_remove_error_notification('blocks_name');"  onchange="blockname_validate()">
                             </div>
                         </div>
                     </div>
@@ -20,7 +20,7 @@
             </div>
             <div class="modal-footer ">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="save_button" name="save_button">Save</button>
+                <button type="button" class="btn btn-primary" id="save_button" name="save_button" disabled>Save</button>
             </div>
         </div>
     </div>

@@ -15,7 +15,7 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <label>Unique ID<span class="required text-red">*</span></label>
-                                <input type="text" class="form-control" id="landlord_uid" name="landlord_uid" placeholder="Unique ID" onkeyup="input_remove_error_notification('firstname');">
+                                <input type="text" class="form-control" id="landlord_uid" name="landlord_uid" placeholder="Unique ID">
                             </div>
                         </div>
                     </div>
@@ -23,7 +23,7 @@
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
                                 <label>Landlord Name<span class="required text-red">*</span></label>
-                                <input type="text" class="form-control" id="landlord_name" name="landlord_name" placeholder="Landlord Name" onkeyup="input_remove_error_notification('firstname');">
+                                <input type="text" class="form-control" id="landlord_name" name="landlord_name" placeholder="Landlord Name" onkeyup="input_remove_error_notification('landlord_name');">
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">

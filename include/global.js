@@ -594,3 +594,12 @@ function calcNetCost(cent,cent_value)
     var net_cost = cent * cent_value;
     return net_cost;
 }
+function mobnum_validate(mob)
+{
+    var filter = /^\d*(?:\.\d{1,2})?$/;
+    if (filter.test(mob)) {
+        if(!(mob.length==10)){
+            toastr_error_msg('Mobile Number is Invalid.');
+        }
+    }else{ toastr_error_msg('Mobile Number is Invalid.');}
+}

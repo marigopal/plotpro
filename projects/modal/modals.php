@@ -30,13 +30,13 @@
                     <div class="row">
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label>Project Name</label>
+                                <label>Project Name <span class="required text-red">*</span></label>
                                 <input type="text" class="form-control" id="project_name" name="project_name" placeholder="Project Name">
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label>Project Type</label>
+                                <label>Project Type <span class="required text-red">*</span></label>
                                 <select class="form-control" id="project_type" name="project_type">
                                     <option value="0">--Please Select --</option>
                                     <?php
@@ -56,7 +56,7 @@
                     <div class="row">
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label>Land Name</label>
+                                <label>Land Name <span class="required text-red">*</span></label>
                                 <select class="form-control" id="land_id" name="land_id">
                                     <option value="">--Please Select --</option>
                                     <?php

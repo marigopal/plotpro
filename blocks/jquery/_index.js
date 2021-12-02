@@ -98,3 +98,25 @@ function delete_blocks(id)
 {
     $("#delete_uid").val(id);
 }
+function blockname_validate()
+{
+    var blocks_name = $("#blocks_name").val();
+    $.ajax
+            ({
+                type: "POST",
+                url: "_dbPage/validate_blocks_name.php",
+                data: 'blocks_name=' + blocks_name,
+                datatype: "html",
+                success: function (result)
+                {
+                    if (result == 1)
+                    {
+                        toastr_error_msg('Block Name Already Used.');
+                    } else
+                    {
+                        remove_disabled('save_button');
+                    }
+                }
+            });
+
+}

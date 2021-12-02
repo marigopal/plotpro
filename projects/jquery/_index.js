@@ -33,6 +33,17 @@ $("#save_project").click(function ()
     {
         isNew = true;
     }
+    if(project_name == '')
+    {
+        toastr_error_msg('Please Enter Project Name.');
+    }else if(project_type == 0)
+    {
+        toastr_error_msg('Please Select Project Type.');
+    }else if(land_id == '')
+    {
+        toastr_error_msg('Please Select Land Name.');
+    }
+    else{
     $.ajax
             ({
                 type: "POST",
@@ -58,6 +69,7 @@ $("#save_project").click(function ()
                     }
                 }
             });
+        }
 });
 $("#deleteproject_save").click(function ()
 {
@@ -129,4 +141,26 @@ function update_project(id)
 function delete_project(id)
 {
     $("#deleteproject_uid").val(id);
+}
+function projecttype_validate()
+{
+    var projecttype_name = $("#projecttype_name").val();
+    $.ajax
+            ({
+                type: "POST",
+                url: "_dbPage/validate_prjecttype.php",
+                data: 'projecttype_name=' + projecttype_name,
+                datatype: "html",
+                success: function (result)
+                {
+                    if (result == 1)
+                    {
+                        toastr_error_msg('Project Type Already Used.');
+                    } else
+                    {
+                        remove_disabled('save_button');
+                    }
+                }
+            });
+
 }

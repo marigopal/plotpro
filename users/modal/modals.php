@@ -14,7 +14,7 @@
                     <div class="row">
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label>Full Name</label>
+                                <label>Full Name<span class="required text-red">*</span></label>
                                 <input type="text" class="form-control" id="full_name" name="full_name" placeholder="Full Name">
                                 <span id="password_check" class="help-block"></span>
                             </div>
@@ -36,7 +36,7 @@
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
                                 <label>Mobile Number</label>
-                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number">
+                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" onchange="mobnum_validate(this.value)">
                                 <span id="password_check" class="help-block"></span>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <label>Email Address</label>
-                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Address">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Address" onchange="email_validation('email', 'save_user')" onkeyup="input_remove_error_notification('email')">
                             </div>
                         </div>
                     </div>
@@ -68,13 +68,13 @@
                     <div class="row">
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label>User Name</label>
-                                <input type="text" class="form-control" id="username" name="username" placeholder="User Name">
+                                <label>User Name <span class="required text-red">*</span></label>
+                                <input type="text" class="form-control" id="username" name="username" placeholder="User Name" onchange="username_validate()">
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label>Password</label>
+                                <label>Password <span class="required text-red">*</span></label>
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                     <div class="row">
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
-                                <label>Roles</label>
+                                <label>Roles <span class="required text-red">*</span></label>
                                 <select class="form-control" id="user_role" name="user_role">
                                     
                                 </select>
@@ -96,7 +96,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="save_user" name="save_user">Save</button>
+                <button type="button" class="btn btn-primary" id="save_user" name="save_user" disabled>Save</button>
             </div>
         </div>
     </div>
