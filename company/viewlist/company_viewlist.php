@@ -7,7 +7,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_array(MYSQLI_BOTH)) {
         ?>	
         <tr>
-            <td><?= ++$sno; ?></td>
+            <td  class="text-center"><?= ++$sno; ?></td>
             <td hidden=""><?php echo $row['company_id']; ?></td>
             <td><?php echo $row['company_name']; ?></td>
             <td><?php echo $row['company_address1'];

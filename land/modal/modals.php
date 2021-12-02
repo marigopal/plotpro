@@ -7,7 +7,7 @@
                         <div class="col-12" >
                             <div class="form-group">
                                 <label>Land Unique ID</label>
-                                <input type="text" class="form-control" id="land_id" name="land_id" placeholder="Land ID" onkeyup="input_remove_error_notification('email');">
+                                <input type="text" class="form-control" id="land_id" name="land_id" placeholder="Land ID" >
                             </div>
                         </div>
                     </div>
@@ -15,7 +15,7 @@
                         <div class="col-12 col-sm-6">
                             <div class="form-group">
                                 <label>Land Name<span class="required text-red">*</span></label>
-                                <input type="text" class="form-control" id="land_name" name="land_name" placeholder="Land Name" onkeyup="input_remove_error_notification('firstname');">
+                                <input type="text" class="form-control" id="land_name" name="land_name" placeholder="Land Name" onkeyup="input_remove_error_notification('land_name');">
                             </div>
                         </div>
                         <div class="col-12 col-sm-6">

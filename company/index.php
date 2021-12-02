@@ -25,9 +25,9 @@ include ("modal/modals.php");
                     <div class="card">
                         <div class="card-body">
                             <table id="company_list" class="table table-bordered table-striped">
-                                <thead>
-                                    <tr>
-                                        <th width="10%">#</th>
+                                <thead >
+                                    <tr class="text-center">
+                                        <th >#</th>
                                         <th hidden="">ID</th>
                                         <th>Name</th>
                                         <th>Address</th>

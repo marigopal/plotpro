@@ -6,7 +6,7 @@ function inputbox_error_notification(input, msg)
 }
 function input_remove_error_notification(input)
 {
-    $("#" + input).removeClass('is-invalid').addClass('is-valid');
+    $("#" + input).removeClass('is-invalid');
     $("#" + input).prop('title', '');
     $("#" + input).focus();
 
