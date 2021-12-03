@@ -3,7 +3,6 @@
     <section class="">
         <div class="">
             <div class="">
-               
                 <div class="signup-form"  id="phonenumber_selection" >
                     <h1 class="form-title">Database</h1>
                     <div class="form-group">
