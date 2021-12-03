@@ -29,7 +29,7 @@
     </head>
 
     <body>
-        <div class="page-wrapper bg-gra-01 p-t-10 p-b-100 font-poppins">
+        <div class="page-wrapper p-t-10 p-b-100 font-poppins">
             <div class="wrapper wrapper--w680">
                 <div class="card card-4">
                     <div class="card-body" id="register_div" hidden="">

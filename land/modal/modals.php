@@ -51,7 +51,7 @@
                             </div>
                             <div class="form-group">
                                 <label>Square Feet Value</label>
-                                <input type="number" class="form-control" id="land_square_feet" name="land_square_feet" placeholder="Square Feet" onkeyup="input_remove_error_notification('password');">
+                                <input type="number" class="form-control" id="land_square_feet" name="land_square_feet" placeholder="Square Feet" onkeyup="input_remove_error_notification('password'); num_word(this.value);" >
                             </div>
                         </div>
                     </div>
