@@ -450,7 +450,7 @@ function load_assigned_to(ddlName,selectedvalue) {
                     
                     if (len != 0)
                     {
-                        strHTML = "<option>Please Select</option>";
+                        strHTML = "<option value=''>Please Select</option>";
                         for (var i = 0; i < len; i++)
                         {
                             var _role_id = result[i]['role_id'];

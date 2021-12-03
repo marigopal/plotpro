@@ -103,6 +103,7 @@ $("#delete_user").click(function ()
 });
 function update_user(id)
 {
+    remove_disabled('save_user');
     $.ajax
             ({
                 type: "POST",

@@ -39,6 +39,19 @@ $("#save_plotsales").click(function ()
     {
         isNew = true;
     }
+    if(lead_id == 0)
+    {
+        toastr_error_msg('Please Select Lead.');
+    }else if(project_id == 0)
+    {
+        toastr_error_msg('Please Select Project.');
+    }else if(block_id == 0)
+    {
+        toastr_error_msg('Please Select Block.');
+    }else if(plot_id == 0)
+    {
+        toastr_error_msg('Please Select Plot.');
+    }else{
     $.ajax
             ({
                 type: "POST",
@@ -64,6 +77,7 @@ $("#save_plotsales").click(function ()
                     }
                 }
             });
+        }
 });
 $("#save_delete").click(function () 
 {

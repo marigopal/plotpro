@@ -27,7 +27,7 @@ if ($isNew === 'true') {
 } else if ($isNew === 'false') {
     $query = "UPDATE `tbl_leads` SET `first_name`='$leads_firstname',`mid_name`='$leads_midname',`last_name`='$leads_lastname',
     `title`='$leads_title',`phone`='$leads_phone',`mobile`='$leads_mobile',`email`='$leads_email',`city`='$leads_city',
-    `state`='$leads_state',`zipcode`='$leads_zipcode',`address1`='$leads_address1',`address2`='$leads_address2' WHERE `lead_id` = '$leads_uid'";
+    `state`='$leads_state',`zipcode`='$leads_zipcode',`address1`='$leads_address1',`address2`='$leads_address2',`managed_by`='$managed_by' WHERE `lead_id` = '$leads_uid'";
 }
 $result = $con->query($query);
 if ($result == 1) {

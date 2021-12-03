@@ -20,7 +20,8 @@ while ($row = mysqli_fetch_array($result)) {
     $address1 = $row['address1'];
     $address2 = $row['address2'];
     $login_user_id = $row['login_user_id'];
-    $data_arr[] = array("lead_id" => $lead_id, "first_name" => $first_name, "mid_name" => $mid_name, "last_name" => $last_name, "title" => $title, "phone" => $phone, "mobile" => $mobile, "email" => $email, "city" => $city, "state" => $state, "zipcode" => $zipcode, "address1" => $address1, "address2" => $address2, "login_user_id" => $login_user_id);
+    $managed_by = $row['managed_by'];
+    $data_arr[] = array("lead_id" => $lead_id, "first_name" => $first_name, "mid_name" => $mid_name, "last_name" => $last_name, "title" => $title, "phone" => $phone, "mobile" => $mobile, "email" => $email, "city" => $city, "state" => $state, "zipcode" => $zipcode, "address1" => $address1, "address2" => $address2, "login_user_id" => $login_user_id, "managed_by" => $managed_by);
 }
 echo json_encode($data_arr);
 ?>

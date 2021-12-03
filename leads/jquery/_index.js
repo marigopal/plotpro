@@ -34,6 +34,16 @@ $("#save_leads").click(function ()
     {
         isNew = true;
     }
+    if(leads_title == '')
+    {
+        toastr_error_msg('Please select title.');
+    }else if(leads_firstname == '')
+    {
+        toastr_error_msg('Please Enter First Name.');
+    }else if(managed_by == '')
+    {
+        toastr_error_msg('Please select Managed By.');
+    }else{
     $.ajax
             ({
                 type: "POST",
@@ -59,6 +69,7 @@ $("#save_leads").click(function ()
                     }
                 }
             });
+        }
 });
 $("#leads_delete").click(function ()
 {
@@ -111,6 +122,7 @@ function update_lead(id)
                             var zipcode = result[i]['zipcode'];
                             var address1 = result[i]['address1'];
                             var address2 = result[i]['address2'];
+                            var managed_by = result[i]['managed_by'];
                             if (len > 0)
                             {
                                 $("#leads_logged").val(login_user_id);
@@ -126,7 +138,8 @@ function update_lead(id)
                                 $("#leads_zipcode").val(zipcode);
                                 $("#leads_phone").val(phone);
                                 $("#leads_mobile").val(mobile);
-                                $("#leads_email").val(email);
+                                $("#leads_email").val(email); 
+                                $("#managed_by").val(managed_by); 
                             }
                         }
                     }
